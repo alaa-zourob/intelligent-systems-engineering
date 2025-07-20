@@ -1,0 +1,419 @@
+/* style.css */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+header {
+  background-color: #0e2d4c; /* لون خلفية الشريط */
+  padding: 10px 20px;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo img {
+  height: 80px; /* حجم اللوجو */
+  transition: transform 0.3s ease, filter 0.3s ease;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3)); /* ظل خفيف */
+  border-radius: 10px; /* زوايا ناعمة إذا بتحبي */
+   padding-left: 5px;
+}
+.logo img:hover {
+  transform: scale(1.05); /* تكبير بسيط */
+  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.5)); /* ظل أقوى عند المرور */
+}
+
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  padding-right: 40px;
+}
+
+.nav-list li {
+  position: relative;
+}
+
+.nav-list a {
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  display: block;
+  transition: 0.3s;
+  font-size: 18px; 
+  font-weight: bold; 
+}
+
+
+.nav-list a:hover {
+  background-color: #005599;
+  border-radius: 7px;
+}
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  background-color: #02305d;
+  list-style: none;
+  top: 100%;
+  left: 0;
+  min-width: 260px;
+  z-index: 1000;
+}
+
+.dropdown-menu li a {
+  padding: 20px;
+  color: #f7f7f7;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+.icon {
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+  margin-right: 8px;
+}
+body {
+  background: linear-gradient(to bottom, #8ee4f6, #2b3a67); /* تحديد الاتجاه لأسفل */
+  font-family: 'Segoe UI', sans-serif;
+  color: #f2f2f2; /* لون أفتح وأوضح */
+  margin: 0;
+  padding: 0;
+  line-height: 1.6; /* تحسين التباعد بين الأسطر */
+  letter-spacing: 0.5px; /* توسيع خفيف بين الحروف */
+  background-attachment: fixed; /* يجعل الخلفية ثابتة عند التمرير */
+  min-height: 100vh; /* يضمن ملء الشاشة */
+}
+
+
+.content {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.content h1 {
+  font-size: 3.5em;
+  margin-bottom: 50px;
+  color: #1c3d5a;
+}
+
+.year-buttons {
+  display: grid;
+  gap: 30px;
+  max-width: 800px;
+  margin: auto;
+}
+
+/*  تصميم الفصول */
+
+.year {
+  background: linear-gradient(135deg, #0e2d4c, #1b3e6a);
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+  transition: transform 0.3s ease;
+}
+
+.year:hover {
+  transform: scale(1.05); /* يكبر البلوك بنسبة 5% */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.8); /* ظل أكبر وأقوى */
+  background-color: #144d79; /* لون خلفية أفتح عند المرور */
+  cursor: pointer; /* مؤشر الفأرة يتغير */
+  transition: all 0.3s ease;
+}
+
+
+.year h2 {
+  margin-bottom: 20px;
+  font-size: 2.4em;
+  color: #f7f7f7; /* أبيض */
+}
+
+.year ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.year ul li a {
+  display: inline-block;
+  background-color: #FFD966; 
+  color: #02305d; 
+  font-weight: bold;
+  text-decoration: none;
+  padding: 12px 24px;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.year ul li a:hover {
+  background-color: #003366;
+  color: #ffffff;
+  transform: translateY(-3px);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+  border: 2px solid #ffffff;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+
+.signature-btn-container {
+  text-align: center;
+  margin-top: -10px;
+}
+
+.signature-btn {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 800;
+  background-color:#FFD966; 
+  color: #1c3d5a;
+  border: none;
+  padding: 12px 30px;
+  font-size: 18px;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(255, 0, 128, 0.3); /* توهج خفيف */
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.signature-btn::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255, 0, 128, 0.15), transparent);
+  animation: glow 4s infinite;
+  z-index: -1;
+}
+
+@keyframes glow {
+  0% {
+    transform: translate(0, 0);
+    opacity: 0.4;
+  }
+  50% {
+    transform: translate(8px, 8px);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translate(0, 0);
+    opacity: 0.4;
+  }
+}
+
+.signature-btn:hover {
+  box-shadow: 0 0 20px rgba(255, 0, 128, 0.5);
+  transform: scale(1.05);
+}
+/* الخط العام */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f7f7f7;
+  color: #333;
+}
+
+/* تنسيق العنوان الرئيسي */
+h1 {
+  color: #f7f7f7;
+  text-align: center;
+  margin-top: 30px;
+  font-size: 36px;
+}
+
+/* تنسيق المربعات الخاصة بكل مادة */
+.subject {
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 30px auto;
+  max-width: 800px;
+  transition: transform 0.3s ease;
+}
+
+.subject:hover {
+  transform: scale(1.01);
+}
+
+/* عنوان المادة */
+.subject h2 {
+  color: #240019;
+  font-size: 24px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+/* تنسيق روابط الأقسام كأزرار */
+.subject ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.subject li a {
+  display: inline-block;
+  background-color: #e0e0e0;
+  color: #240019;
+  padding: 10px 15px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.subject li a:hover {
+  background-color: #d4c2d9;
+  transform: translateY(-2px);
+}
+
+/* تنسيق شبكة التخصصات */
+
+.specializations-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  text-align: center;
+  margin-top: 30px;
+}
+
+/* مربعات أسماء التخصصات - بلون ذهبي مشابه */
+.specialization {
+  background-color: #FFD966; /* ذهبي فاتح */
+  padding: 15px 10px;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(255 217 102 / 0.6);
+  transition: transform 0.3s ease;
+}
+
+.specialization:hover {
+  transform: scale(1.05);
+}
+
+/* عنوان التخصص */
+.specialization h3 {
+  margin-bottom: 15px;
+  color: #240019;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+/* روابط أرقام الفصول (1، 2) بدوائر ذهبية */
+.sem-links a {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  margin: 0 10px;
+  background-color: #FFD966; /* ذهبي */
+  color: #240019;
+  border-radius: 50%;
+  font-weight: 800;
+  font-size: 1.2rem;
+  text-decoration: none;
+  box-shadow: 0 2px 8px rgba(255 217 102 / 0.7);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.sem-links a:hover {
+  background-color: #240019;
+  color: #FFD966;
+  border-color: #FFD966;
+  box-shadow: 0 0 15px rgba(255 217 102 / 0.9);
+}
+/* استجابة للموبايل */
+@media (max-width: 768px) {
+  /* جعل قائمة التنقل عمودية */
+  .nav-list {
+    gap: 10px;
+  }
+
+  /* تصغير شعار الجامعة */
+  .logo img {
+    height: 60px;
+  }
+
+  /* تعديل عرض الحاوية للصفحات */
+  .year-buttons, .content {
+    padding: 0 10px;
+  }
+
+  /* شبكة التخصصات تصير عمودية */
+  .specializations-grid {
+    grid-template-columns: 1fr !important;
+    gap: 15px;
+  }
+
+  /* تكبير أزرار الفصول قليلاً */
+  .sem-links a {
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    font-size: 1.4rem;
+    margin: 0 7px;
+  }
+}
+
+.signature-card {
+  background-color: #003366;
+  color: #ffffff;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-style: italic; /* الخط مائل */
+  padding: 20px 30px;
+  border-radius: 16px;
+  width: fit-content;
+  margin: 20px auto 60px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 1.2s ease forwards;
+  transition: transform 0.3s ease;
+}
+
+.signature-card p {
+  margin: 10px 0;
+  font-size: 16px;
+}
+
+/* السمايلات بدون ميلان */
+.no-italic {
+  font-style: normal;
+}
+
+/* الحركة */
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.signature-card:hover {
+  transform: translateY(-5px) scale(1.02);
+}
